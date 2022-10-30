@@ -1,0 +1,48 @@
+
+nav{
+  background-color: skyblue;
+  position:absolute;
+  top: 0%;
+  width: 100%;
+  align-items: center;
+  
+}
+li{
+  display: flex;
+  flex-direction: row;
+width: 100%;
+align-items: center;
+
+
+
+
+}
+
+.footer {
+  bottom: 0%;
+  display: flex;
+  color:black;
+  background-color:skyblue;
+  position: absolute;
+  width: 100%;
+  flex-direction: row;
+ gap: 50px;
+ align-items: center;
+}
+
+
+.contener{
+  bottom:10%;
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  grid-template-rows: repeat(2 , 1fr);
+  
+}
+.Footer-con{
+position: sticky;
+bottom: 0;
+
+}
+
+
+
