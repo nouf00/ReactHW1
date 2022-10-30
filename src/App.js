@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './comp/Nav';
 import Fot from './comp/Fot';
 import Store from './comp/Store';
-
+import Login from './comp/Login'
 
 
 
@@ -38,10 +38,9 @@ function App() {
   Course="DevOps مقدمة في "
   img='myPic/Dvs.png'
   date= {false} /> 
-
-  
- </div>
+  </div>
  <Fot className="Footer-con"></Fot>
+<Login></Login>
   </div>
   )
 }

@@ -23,6 +23,7 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   
+  
   export default function Nav(props) {
     const { isOpen, onToggle } = useDisclosure(); 
   
@@ -74,7 +75,7 @@ import {
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
-              href={'#'}>
+              href={'./login'}>
               Sign In
             </Button>
             <Button
