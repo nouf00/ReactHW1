@@ -1,4 +1,3 @@
-import { chakra } from '@chakra-ui/react';
 import {
   Button,
   Checkbox,
@@ -10,68 +9,39 @@ import {
   Link,
   Stack,
   Image,
-  FormHelperText,
-  FormErrorMessage,
-  useState,
-
-
+  useState
 } from '@chakra-ui/react';
 
-
 export default function Login() {
-  const [email, setEmail] = useState('')
-  const handleInputChange = (e) => setEmail(e.target.value)
-   const isError = email === ''
+    const [email, setEmail] = useState(' ')
+    const handleInputChange = (e) => setEmail(e.target.value)
+     const isError = email === ' '
+  
+  
+    const [pass, setPass] = useState(' ')
+    const handleInputChange1 = (e) => setPass(e.target.value)
+    const isError1 = pass === ' '
 
+    function check(){
+      if(pass && email == null){
+      return(<p>Enter Email or Password</p>)}
+    }
 
-  const [pass, setPass] = useState('')
-  const handleInputChange1 = (e) => setPass(e.target.value)
-  const isError1 = pass === ''
 
   return (
     <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'md'}>
           <Heading fontSize={'2xl'}>Sign in to your account</Heading>
-          <FormControl isInvalid={isError}>
-      <FormLabel>Email</FormLabel>
-      <Input type='email' value={email} onChange={handleInputChange} />
-      {!isError ? (
-        <FormHelperText>
-          Enter the email you'd like to receive the newsletter on.
-        </FormHelperText>
-      ) : (
-        <FormErrorMessage>Email is required.</FormErrorMessage>
-       
-      )}    </FormControl>
-
-
-
-
-<FormControl isInvalid={isError1}>
-        <FormLabel>password</FormLabel>
-        <Input type='password' value={pass} onChange={handleInputChange1} />
-            {!isError1 ? (
-         <FormHelperText>
-          Enter the password you'd like to receive the newsletter on.
-         </FormHelperText>) :
-          ( <FormErrorMessage>password is required</FormErrorMessage> )}
-    </FormControl>
-
-
-
-
-
-
-
-
-
-
-          
-          {/* <FormControl id="password">
+          <FormControl id="email">
+            <FormLabel>Email address</FormLabel>
+         <Input type='email' value={email} onChange={handleInputChange} />
+          </FormControl>
+          <FormControl id="password">
             <FormLabel>Password</FormLabel>
-            <Input type="password" />
-          </FormControl> */}
+            <Input type='Password' value={pass} onChange={handleInputChange1} />
+          </FormControl>
+
           <Stack spacing={6}>
             <Stack
               direction={{ base: 'column', sm: 'row' }}
@@ -91,13 +61,95 @@ export default function Login() {
           alt={'Login Image'}
           objectFit={'cover'}
           src={
-        "./myPic/logo.png"
+            'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80'
           }
         />
       </Flex>
     </Stack>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
