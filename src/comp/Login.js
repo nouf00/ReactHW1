@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
   Button,
   Checkbox,
@@ -9,23 +10,21 @@ import {
   Link,
   Stack,
   Image,
-  useState
+  FormHelperText,
+  FormErrorMessage,
 } from '@chakra-ui/react';
 
 export default function Login() {
     const [email, setEmail] = useState(' ')
     const handleInputChange = (e) => setEmail(e.target.value)
-     const isError = email === ' '
+     const isError = email === " "
   
   
     const [pass, setPass] = useState(' ')
     const handleInputChange1 = (e) => setPass(e.target.value)
-    const isError1 = pass === ' '
+    const isError1 = pass === " "
 
-    function check(){
-      if(pass && email == null){
-      return(<p>Enter Email or Password</p>)}
-    }
+    
 
 
   return (
@@ -33,16 +32,29 @@ export default function Login() {
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'md'}>
           <Heading fontSize={'2xl'}>Sign in to your account</Heading>
-          <FormControl id="email">
-            <FormLabel>Email address</FormLabel>
-         <Input type='email' value={email} onChange={handleInputChange} />
-          </FormControl>
-          <FormControl id="password">
-            <FormLabel>Password</FormLabel>
-            <Input type='Password' value={pass} onChange={handleInputChange1} />
-          </FormControl>
+          
 
-          <Stack spacing={6}>
+           <FormControl isInvalid={isError}>
+        <FormLabel>Email</FormLabel>
+        <Input type='email' value={email} onChange={handleInputChange} />
+       {!isError ? (
+        <FormHelperText>Enter the email</FormHelperText>
+      ) : (
+        <FormErrorMessage>Email is required.</FormErrorMessage>
+      )}
+     </FormControl>
+    <FormControl isInvalid={isError1}>
+      <FormLabel>Password</FormLabel>
+      <Input type='password' value={pass} onChange={handleInputChange1} />
+      {!isError1 ? (
+        <FormHelperText>
+          Enter the password .
+        </FormHelperText>
+      ) : (
+        <FormErrorMessage>password is required.</FormErrorMessage>
+      )}
+    </FormControl>
+     <Stack spacing={6}>
             <Stack
               direction={{ base: 'column', sm: 'row' }}
               align={'start'}
@@ -308,8 +320,7 @@ export default function Login() {
 
 
 
-// import React from "react"
-// import {
+
 //   FormControl,
 //   FormLabel,
 //   FormErrorMessage,
