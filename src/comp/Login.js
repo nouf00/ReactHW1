@@ -15,14 +15,14 @@ import {
 } from '@chakra-ui/react';
 
 export default function Login() {
-    const [email, setEmail] = useState(' ')
+    const [email, setEmail] = useState('')
     const handleInputChange = (e) => setEmail(e.target.value)
-     const isError = email === " "
+     const isError = email === ""
   
   
-    const [pass, setPass] = useState(' ')
+    const [pass, setPass] = useState('')
     const handleInputChange1 = (e) => setPass(e.target.value)
-    const isError1 = pass === " "
+    const isError1 = pass === ""
 
     
 
