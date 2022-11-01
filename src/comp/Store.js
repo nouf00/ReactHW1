@@ -1,5 +1,13 @@
-import React from 'react';
-import { Stack, Text, Button, grid } from '@chakra-ui/react';
+
+import React, {useState} from 'react';
+import {
+   Stack, 
+  Text,
+   Button, 
+   grid,
+   Box,
+  Flex,
+  useColorModeValue } from '@chakra-ui/react';
 
 
 
@@ -7,12 +15,11 @@ export default function Store(props) {
   
   
   return (
- 
-   
+
     <Stack p="9" boxShadow="lg" m="9" borderRadius="sm" top={'10%'}>
       <Stack direction="column" alignItems="center">
         <Text fontWeight="semibold" >{props.Course}</Text>
-        
+
       </Stack>
       
       <Stack
@@ -30,15 +37,7 @@ export default function Store(props) {
             {!props.date && <Button colorScheme="red" >التسجيل مغلق </Button>}
 
              
-            {/* {
-                (() => {
-                    if(props.date ===true) {
-                      <Button colorScheme='green'>التسجيل متاح  </Button>
-                        } else {
-                          <Button colorScheme="red" >التسجيل مغلق </Button>
-                        } 
-                })()  
-            }   */}
+           
          
          
        
@@ -46,19 +45,12 @@ export default function Store(props) {
       </Stack>
     </Stack>
    
-       
+    
   );
 
  
 }
 
-// function condtion(date){
-//   if(date2==0)
-//   { return(<Button colorScheme="green" margin = '7'>التسجيل متاح </Button>)}
-
-//   else{ return(<Button colorScheme="red" margin = '7'>التسجيل مغلق </Button>)}
-
-// }
 
 
 

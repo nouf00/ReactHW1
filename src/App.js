@@ -4,43 +4,54 @@ import Nav from './comp/Nav';
 import Fot from './comp/Fot';
 import Store from './comp/Store';
 import Login from './comp/Login'
-
+import Gried from './comp/Gried';
+import Searche from './comp/Searche';
 
 
 function App() {
   return (
     <div >
   <Nav></Nav>
-  
-  <div className='contener'>
-  <Store className='imgSwhaer' 
-  Course="معسكر سواهر "
+  <Searche></Searche>
+  <ul className='contener'>
+
+  <li><Store className='imgSwhaer' 
+  Course="Swaher Bootcamp"
   img='myPic/Swaher.png'
-  date= {true} /> 
-  <Store 
-  Course= " Figma من البداية حتى الاتقان باستخدام UI/UX"
+  date= {true} /> </li>
+
+ <li> <Store 
+  Course= "UI/UX using figma"
   img='myPic/UI-UX.png'
   butt={false}>
-  </Store> 
-  <Store 
-  Course=" No-Code دورة تصميم المواقع بمنهجية "
+  </Store> </li>
+
+  <li><Store 
+  Course="Web desing using ON-Code"
   img='myPic/NoCode.PNG'
-  date= {false} /> 
-  <Store 
-  Course="  SwiftUIباستخدام ios دورة لتطوير تطبيقات"
+  date= {false} /> </li>
+
+ <li> <Store 
+  Course=" web desing for IOS usinf SwiftUI"
   img='myPic/IOS.PNG'
-  date= {false} /> 
-  <Store 
-  Course="GIT & Githup دورة "
+  date= {false} /> </li>
+
+
+  <li><Store 
+  Course="GIT & Githup"
   img='myPic/GitGithup.png'
-  date= {false} /> 
-  <Store 
-  Course="DevOps مقدمة في "
+  date= {false} /> </li>
+
+
+  <li><Store 
+  Course="Introdection in DecOps"
   img='myPic/Dvs.png'
-  date= {false} /> 
-  </div>
+  date= {false} /> </li>
+   </ul>
+   
  <Fot className="Footer-con"></Fot>
-<Login></Login>
+{/* <Login></Login>  */}
+
   </div>
   )
 }

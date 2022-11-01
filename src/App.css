@@ -7,7 +7,7 @@ nav{
   align-items: center;
   
 }
-li{
+/* li{
   display: flex;
   flex-direction: row;
 width: 100%;
@@ -16,7 +16,7 @@ align-items: center;
 
 
 
-}
+} */
 
 .footer {
   bottom: 0%;

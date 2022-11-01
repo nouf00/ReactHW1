@@ -1,0 +1,56 @@
+
+
+// const nameSto=[
+//     "Swaher Bootcamp",
+//     "UI/UX using figma",
+//     "Web desing using ON-Code",
+//     "web desing for IOS usinf SwiftUI",
+//     "GIT & Githup",
+//    "Introdection in DecOps"]
+
+
+
+
+
+
+
+
+
+ // const handleInputChange = (e) => setItemSe(e.target.value)
+//      const rsultSh=()=>{
+    //     const item= ["Nouf fahad","Maha Almubadel",'Rahab Alusma','Malak Bassam','Roaa Almubadel','Raghed Alwahby', 'Gramme Hassen']
+    //    for(let x=0 ;x>item.length;x++){
+    //         if(item[x]===ItemSe ){
+    //             alert("موجوده");
+
+    //         }else { alert("غير موجوده");}
+    //    }
+    // }
+    
+
+    //  const SearchC=()=>{
+    //       rsultSh()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+ const filteredData = nameSto.filter((el) => {
+                 
+ if (props.input === '') {
+                
+                    }
+                
+ else { el.text.toLowerCase().includes(props.input)}
+}
