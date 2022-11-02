@@ -1,6 +1,6 @@
-
 import { React, useState } from 'react'
 import Store from './Store';
+
 import {
   Button,
   Checkbox,
@@ -19,36 +19,15 @@ import {
 } from '@chakra-ui/react';
 
 function Searche(props) {
-    const [ItemSe, setItemSe]= useState('')
+    const [serbox, setserbox]= useState('')
     const handleInputChange = (e) => {
         let lowerCase = e.target.value.toLowerCase();
-        setItemSe(lowerCase);}
+        setserbox(lowerCase);}
    
    
-        const nameSto=[
-            "Swaher Bootcamp",
-            "UI/UX using figma",
-            "Web desing using ON-Code",
-            "web desing for IOS usinf SwiftUI",
-            "GIT & Githup",
-           "Introdection in DecOps"]   
+          
 
-   const itemS=()=>{
-    nameSto.filter(
-        (ItemSe)=>{
-            for(let x =0; x>nameSto.length;x++){
-                if(ItemSe==" "){
-                  alert(" Enter your text")
-            }
-
-        }}
-    )
-
-
-   }
- const sumi=()=>{
-    itemS()
- }
+ 
 
   return (
     <Box >
@@ -61,8 +40,8 @@ function Searche(props) {
           justifyContent="center"
           alignItems="center">
         <form align-items= 'center'>
-    <input type="text" borderStyle={'solid'} value={ItemSe} onChange={handleInputChange} placeholder="Search here"></input>
-    <Button سcolorScheme={'blue'} backgroundColor="skyblue" variant={'solid'} height="7" left={"10"} onClick={sumi}>Searche</Button>
+    <input type="text" borderStyle={'solid'} value={serbox} onChange={handleInputChange} placeholder="Search here"></input>
+    <Button colorScheme={'blue'} backgroundColor="skyblue" variant={'solid'} height="7" left={"10"} >Searche</Button>
   </form>
      
     </Flex>

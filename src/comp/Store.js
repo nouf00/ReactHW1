@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import {Link,Router} from 'react-router-dom'
 import {
    Stack, 
   Text,
@@ -28,13 +29,8 @@ export default function Store(props) {
         <img src={props.img} alt="new Course" alignItems="center">
         </img>
         <Stack direction= "column" alignItems="center" >
-                 {/* <Button variant="outline" colorScheme="green">
-            Cookie Preferences
-          </Button>  */}
-
-          
-            {props.date && <Button colorScheme='green'>التسجيل متاح  </Button>}
-            {!props.date && <Button colorScheme="red" >التسجيل مغلق </Button>}
+           {props.date && <Button colorScheme='green'>التسجيل متاح </Button>}
+            {!props.date && <Button colorScheme="red" >التسجيل مغلق</Button>}
 
              
            
